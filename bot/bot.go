@@ -45,7 +45,7 @@ func NewBot(token string, lg *log.Logger) *Bot {
 	//todo db
 
 	//function map
-	cbc.loadDefaultFunc()
+	cbc.fmap = cbc.loadDefaultFunc()
 
 	return cbc
 }
