@@ -16,7 +16,12 @@ func main() {
 		if update.Message == nil {
 			continue
 		}
-		cbc.Router(*update.Message)
+		if update.Message != nil {
+			cbc.Router(*update.Message)
+		} else if update.EditedMessage != nil {
+			cbc.Router(*update.EditedMessage)
+		}
+
 		//log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
 
 		//msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text)

@@ -31,6 +31,7 @@ type huobires struct {
 
 func (b *Bot) GetPrice(m *botmessage) {
 	if len(m.Args) == 0 {
+		//b.SendMessage(m.Msg,)
 		//todo print the user subscribe's coin,use the database
 	} else {
 		for _, pair := range m.Args {

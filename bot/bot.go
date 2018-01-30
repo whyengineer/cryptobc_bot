@@ -82,8 +82,9 @@ func (b *Bot) Router(msg tgbotapi.Message) {
 }
 func (b *Bot) loadDefaultFunc() map[string]ResponseFunc {
 	return map[string]ResponseFunc{
-		"/start": b.Start,
-		"/price": b.GetPrice,
+		"/start":     b.Start,
+		"/price":     b.GetPrice,
+		"/set_alarm": b.SetAlarm,
 	}
 }
 
